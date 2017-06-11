@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <title>Hexo</title>
+  <meta name="author" content="John Doe" />
+
+  
+  <meta name="description" content="Vue常用的指令
+12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061双向数据绑定只能用在input表单上只要数据改变就会刷新" />
+  
+
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  
+  <meta property="og:site_name" content="Hexo" />
+
+  
+  
+
+  
+    <meta property="og:image" content="undefined" />
+  
+
+  
+  <link href="/css/images/favicon.ico" rel="icon" />
+  
+
+  <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Hexo</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2017-06-11T11:32:53.515Z"><a href="/2017/06/11/Vue/">2017-06-11</a></time>
+      
+      
+  
+    <h1 class="title"></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>Vue常用的指令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">双向数据绑定只能用在input表单上</div><div class="line">只要数据改变就会刷新视图</div><div class="line">视图:就是html</div><div class="line">数据:就是data</div><div class="line"></div><div class="line"></div><div class="line">只要页面上有任意一个数据刷新会导致写在页面上的&#123;&#123;fn()&#125;&#125;</div><div class="line">fn执行 所以一般不要&#123;&#123;fn()&#125;&#125;这样写,不要在&#123;&#123;&#125;&#125;里直接让函数执行</div><div class="line"></div><div class="line">computed:计算属性,不能和data,methods的名字冲突</div><div class="line">如果有需要写成&#123;&#123;fn()&#125;&#125;一定要用computed代替写成&#123;&#123;fn&#125;&#125;</div><div class="line">只会根据自己函数里面依赖属性改变,才会执行方法</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">v-text</div><div class="line">v-html 可以显示html标签</div><div class="line">v-once 数据只会改变一次</div><div class="line">v-if  后面是一个布尔值 </div><div class="line">v-if   是根据条件表达式的值来执行元素的插入或者删除行为</div><div class="line">v-show 根据条件表达式的值来显示或不显示元素 display值 </div><div class="line"></div><div class="line">v-show 如果为false 则displjay:none 如果频繁切换显示或者隐藏 我们就使用v-show</div><div class="line">v-if 如果为false 则removeChild 不频繁切换显示/判断数据是否存在</div><div class="line"></div><div class="line">v-else 指令</div><div class="line">可以用v-else指令为v-if或v-show添加一个“else块”</div><div class="line">v-else元素必须立即跟在v-if或v-show元素的后面——否则它不能被识别。</div><div class="line">前面的v-if/show为true 后面的v-else就为false 反之一样</div><div class="line"></div><div class="line"></div><div class="line">v-for:  v-for=&quot;(item,index) in ary&quot;</div><div class="line">item数组的当前项,index当前索引</div><div class="line">如果循环的是对象</div><div class="line">item是当前项的值,index是属性名</div><div class="line">要重复谁就在谁的身上写v-for</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">v-on:click=&apos;fn&apos;--&gt; @click=&apos;fn&apos;</div><div class="line">fn后面加了括号就必须传参,如果没写参数后面函数的的形参就是undefined</div><div class="line">不加括号就没有向函数传参</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">v-bind</div><div class="line">绑定我们vue的属性和默认的结构属性</div><div class="line"></div><div class="line"></div><div class="line">自定义指令:</div><div class="line">v-xx=&quot;值&quot;</div><div class="line">只要值发生改变就会触发指令</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">created()&#123;</div><div class="line">//当VUE创建完成时执行这里</div><div class="line">//当vue创建完成还没有到页面中渲染数据时向本地读取数据</div><div class="line"> &#125;,</div></pre></td></tr></table></figure>
+<h2 id="修饰符"><a href="#修饰符" class="headerlink" title="修饰符"></a>修饰符</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">@click.xxx</div><div class="line">@keydown.13</div><div class="line"></div><div class="line">.stop    :阻止当前元素的事件冒泡</div><div class="line">.capture :当前元素绑定的方法在捕获阶段触发</div><div class="line">.keyCode :按下指定的哪一个键</div><div class="line">.once  当前元素绑定的事件只触发一次</div><div class="line">.prevent 提交事件不再重载页面</div><div class="line">.self  只有当当前元素自己事件触发了才会执行绑定的方法</div></pre></td></tr></table></figure>
+<h2 id="动态绑定"><a href="#动态绑定" class="headerlink" title="动态绑定"></a>动态绑定</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">v-bind动态绑定指令,默认情况下标签自带属性的值是固定的</div><div class="line">在为了能够动态的给这些属性添加值，可以使用v-bind:你要动态变化的值=&quot;表达式&quot;</div><div class="line"></div><div class="line"></div><div class="line">v-bind:属性=&quot;变量&quot; --&gt; :属性=&quot;变量&quot;</div><div class="line"></div><div class="line">&lt;div :class=&quot;[&apos;样式1&apos;,变量1]&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;div :class=&quot;&#123;&apos;样式1&apos;:true,&quot;样式2&quot;:false&#125;&quot;&gt;&lt;/div&gt;</div><div class="line"></div><div class="line">&lt;div :style=&quot;&#123;color:&apos;red&apos;,background:&apos;blue&apos;&#125;&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;div :style=&quot;[行内样式对象1,行内样式对象2]&quot;&gt;&lt;/div&gt;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">&lt;img src=&quot;&quot; alt=&quot;&quot; :width=w :height=h&gt;</div><div class="line">data: &#123;</div><div class="line">            w:&quot;500px&quot;,</div><div class="line">            h:&quot;500px&quot;</div><div class="line">        &#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Suche">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
+</div>
+
+  
+
+  
+<div class="widget tag">
+  <h3 class="title">Neueste Artikel</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2017/06/11/Vue/"></a>
+      </li>
+    
+      <li>
+        <a href="/2017/06/11/hello-world/">Hello World</a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+
+  
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  <p>
+  
+  &copy; 2017 John Doe
+  
+  All rights reserved.</p>
+  <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</div>
+<div class="clearfix"></div>
+
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script></footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<div id='bg'></div>
+</body>
+</html>
